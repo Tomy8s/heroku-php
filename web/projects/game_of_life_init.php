@@ -1,4 +1,3 @@
-<!--by T. Yates-->
 <?php include('../views/header.html');?>
     <h1>Welcome to the Game of Life</h1>
     <h3>How to play</h3>
