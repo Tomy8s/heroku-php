@@ -1,0 +1,35 @@
+/*By T. Yates*/
+*{
+    font-size: 26px;
+}
+form{
+    line-height: 2em;
+    display: block;
+}
+table{
+    margin: 0 auto;    
+}
+tr td:first-child{
+    text-align: right;
+}
+input{
+    border: 15px solid #484848;
+    border-radius: 15px;
+    background-color: #484848;
+    color: #FFFFFF;
+}
+.txtlen{
+    width: 300px;    
+}
+input[type=radio]{
+    width: 26px;
+    height: 26px;
+}
+#sex{
+    margin: auto;
+}
+#submit{
+    width: 150px;
+    margin: 0 auto;
+}
+/*By T. Yates*/

@@ -1,0 +1,17 @@
+/*By T. Yates*/
+*{
+    font-size:24px;
+    margin: 0 auto;
+}
+buttons{
+    position: static;
+    display: block;
+    margin: 0 auto;
+}
+td{
+    padding: 10px;
+}
+@media print #buttons{
+    display: none;
+}
+/*By T. Yates*/

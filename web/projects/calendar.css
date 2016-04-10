@@ -1,0 +1,190 @@
+body{
+    font-family: sans-serif;
+    background-color: #FFF;
+    border-color: #EFF;
+}
+a{
+    color: inherit;
+}
+#header{
+    color: #222;
+    margin-right: auto;
+    margin-left: auto;
+    width: 715px;
+}
+h1{
+    font-size: 36px;
+    display: inline-block;
+    text-align: center;
+    margin: 0px;
+    width: 500px;
+}
+h6{
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0px;
+}
+.selection{
+    width: 100px;
+    display: inline-block;
+    margin: 0px;
+}
+#last{
+    text-align: left;
+    float: left;
+}
+#next{
+    text-align: right;
+    float: right;
+}
+#calendar{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 250px;
+    width: auto;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    clear: both;
+    width: auto;
+    }
+li{
+    list-style: none;
+    float: left;
+    width: 14.2857%;
+    border-radius: 13px;
+    border-width: 1px;
+    border-style: solid;
+    margin: -1px;
+}
+#day_names li{
+    background-color: #AAC;
+    text-align: center;
+    color: #EEEEEE;
+    border-color: #FFF;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    margin-bottom: 2px;
+}
+.dates li{
+    height: 200px;
+    border-color: white;
+}
+.dateno{
+    margin: 15px;
+}
+.datenum{
+    color: #333;
+    float: none;
+    display: inline-block;
+    line-height: 100%;
+    padding: 3px;
+    margin-top: -10px;
+    vertical-align: middle;
+}
+.not-this-month .adddiv{
+    display: none;
+}
+.adddiv{
+    text-decoration: none;
+    background-color: #333;
+    color: #FFF;
+    float: right;
+    display: inline;
+    border-radius: 13px;
+    padding: 3px;
+    margin-top: -10px;
+    overflow: hidden;
+}
+.plus{
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 14px;
+    display: inline;
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    margin: -2px;
+    /*background-color:red;*/
+    vertical-align:middle;
+}
+.adddiv:hover .plus{
+    transform: rotate(-180deg);
+    transition-duration: 1s;
+}
+.adddiv:not(:hover) .plus{
+    transform: rotate(180deg);
+    transition-duration: 1s;
+}
+.add{
+    position: relative;
+    white-space: nowrap;
+    font-size: 14px;
+    height: 100%;
+    padding: 2px;
+    margin: -2px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+    /*bits that change*/
+    line-height: 0px;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    left: 75px;
+}
+.adddiv:hover .add{
+    line-height: 14px;
+    width: 70px;
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    transition-property: width, opacity, left;
+    transition-duration: 1s;
+}
+.adddiv:not(:hover) .add{
+    line-height: 0px;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    left: 75px;
+    transition-property: width, opacity, left;
+    transition-duration: 1s;
+}
+.this-month .dateno{
+    display: block;
+    color: #222;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #AAA;
+}
+.not-this-month .dateno{
+    color: #BBB;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #CCC;
+}
+.this-month{
+    background-color: #DDD;
+}
+.this-month:hover{
+    background-color: #FFF;
+}
+.not-this-month{
+    background-color: #EEE;
+}
+#iframe{
+    /*background-color: #FFF;*/
+    padding: 25%;
+    border: none;
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    z-index: -1;
+}
+#footer{
+    display: block;
+    float: none;
+}
