@@ -1,4 +1,4 @@
-<?php include('../views/header.html');?>
+<?php include('../views/header.php');?>
     <h1>Welcome to the Game of Life</h1>
     <h3>How to play</h3>
     <p>

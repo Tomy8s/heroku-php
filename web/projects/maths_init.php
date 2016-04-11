@@ -1,4 +1,4 @@
-<?php include('../views/header.html');?>
+<?php include('../views/header.php');?>
     <form action="maths.php" method="get" onsubmit="return check()">
         <p>
         Operators:<br>

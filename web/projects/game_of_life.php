@@ -1,5 +1,4 @@
-<!--by T. Yates-->
-<?php include('../views/header.html');?>
+<?php include('../views/header.php');?>
 <?php
 $rows = abs(intval($_GET['rows']));
 $rowno = 1;

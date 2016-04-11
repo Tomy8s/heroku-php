@@ -1,4 +1,4 @@
-<?php include('../views/header.html');?>
+<?php include('../views/header.php');?>
 <?php
 if (!(((isset($_GET['+']))||(isset($_GET['-']))||(isset($_GET['x']))||(isset($_GET['÷']))))&&(isset($_GET['min1']))&&(isset($_GET['max1']))&&(isset($_GET['min2']))&&(isset($_GET['max2']))&&(isset($_GET['minA']))&&(isset($_GET['maxA']))){
     echo 'Please go <a href="maths.html">back</a> and check your settings.';
