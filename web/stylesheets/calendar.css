@@ -1,56 +1,56 @@
-body{
+main {
     font-family: sans-serif;
     background-color: #FFF;
     border-color: #EFF;
 }
-a{
-    color: inherit;
+main a{
+    color: #FFFFFF;
 }
-#header{
+main #header{
     color: #222;
     margin-right: auto;
     margin-left: auto;
     width: 715px;
 }
-h1{
+main h1{
     font-size: 36px;
     display: inline-block;
     text-align: center;
     margin: 0px;
     width: 500px;
 }
-h6{
+main h6{
     font-size: 12px;
     line-height: 18px;
     margin: 0px;
 }
-.selection{
+main .selection{
     width: 100px;
     display: inline-block;
     margin: 0px;
 }
-#last{
+main #last{
     text-align: left;
     float: left;
 }
-#next{
+main #next{
     text-align: right;
     float: right;
 }
-#calendar{
+main #calendar{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 250px;
     width: auto;
 }
-ul{
+main ul{
     margin: 0px;
     padding: 0px;
     background-color: white;
     clear: both;
     width: auto;
     }
-li{
+main li{
     list-style: none;
     float: left;
     width: 14.2857%;
@@ -59,7 +59,7 @@ li{
     border-style: solid;
     margin: -1px;
 }
-#day_names li{
+main #day_names li{
     background-color: #AAC;
     text-align: center;
     color: #EEEEEE;
@@ -68,14 +68,14 @@ li{
     padding-bottom: 3px;
     margin-bottom: 2px;
 }
-.dates li{
+main .dates li{
     height: 200px;
     border-color: white;
 }
-.dateno{
+main .dateno{
     margin: 15px;
 }
-.datenum{
+main .datenum{
     color: #333;
     float: none;
     display: inline-block;
@@ -84,13 +84,12 @@ li{
     margin-top: -10px;
     vertical-align: middle;
 }
-.not-this-month .adddiv{
+main .not-this-month .adddiv{
     display: none;
 }
-.adddiv{
+main .adddiv{
     text-decoration: none;
     background-color: #333;
-    color: #FFF;
     float: right;
     display: inline;
     border-radius: 13px;
@@ -98,7 +97,8 @@ li{
     margin-top: -10px;
     overflow: hidden;
 }
-.plus{
+main .plus{
+    color: #FFF;
     font-weight: 900;
     font-size: 14px;
     line-height: 14px;
@@ -107,18 +107,18 @@ li{
     width: 100%;
     padding: 2px;
     margin: -2px;
-    /*background-color:red;*/
     vertical-align:middle;
 }
-.adddiv:hover .plus{
+main .adddiv:hover .plus{
     transform: rotate(-180deg);
     transition-duration: 1s;
 }
-.adddiv:not(:hover) .plus{
+main .adddiv:not(:hover) .plus{
     transform: rotate(180deg);
     transition-duration: 1s;
 }
-.add{
+main .add{
+    color: #FFF;
     position: relative;
     white-space: nowrap;
     font-size: 14px;
@@ -135,7 +135,7 @@ li{
     opacity: 0;
     left: 75px;
 }
-.adddiv:hover .add{
+main .adddiv:hover .add{
     line-height: 14px;
     width: 70px;
     visibility: visible;
@@ -144,7 +144,7 @@ li{
     transition-property: width, opacity, left;
     transition-duration: 1s;
 }
-.adddiv:not(:hover) .add{
+main .adddiv:not(:hover) .add{
     line-height: 0px;
     width: 0;
     visibility: hidden;
@@ -153,26 +153,26 @@ li{
     transition-property: width, opacity, left;
     transition-duration: 1s;
 }
-.this-month .dateno{
+main .this-month .dateno{
     display: block;
     color: #222;
     border-bottom-style: solid;
     border-bottom-width: 2px;
     border-bottom-color: #AAA;
 }
-.not-this-month .dateno{
+main .not-this-month .dateno{
     color: #BBB;
     border-bottom-style: solid;
     border-bottom-width: 2px;
     border-bottom-color: #CCC;
 }
-.this-month{
+main .this-month{
     background-color: #DDD;
 }
-.this-month:hover{
+main .this-month:hover{
     background-color: #FFF;
 }
-.not-this-month{
+main .not-this-month{
     background-color: #EEE;
 }
 #iframe{

@@ -10,6 +10,8 @@
 <head>
     <title>Tom's site</title>
     <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+    <?php if (basename($_SERVER['REQUEST_URI']) == 'calendar.php') echo '<link rel="stylesheet" type="text/css" href="../stylesheets/calendar.css">
+    ';?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 

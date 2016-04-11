@@ -5,7 +5,6 @@
 }
 body{
     height: 100%;
-    /*background: red;*/
 }
 #top{
     position: relative;
@@ -113,6 +112,7 @@ body{
     background: linear-gradient(#123456, #AFAFB3);
 }
 main{
+    margin-top: 10px;
     margin-bottom: 50px;
 }
 footer{
