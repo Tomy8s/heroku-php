@@ -5,7 +5,7 @@
             <input type="checkbox" name="+" id="+" onclick="flipGrey()">+<br>
             <input type="checkbox" name="-" id="-">-<br>
             <input type="checkbox" name="x" id="x" onclick="flipGrey()">x<br>
-            <input type="checkbox" name="÷" id="÷">÷<br>
+            <!--<input type="checkbox" name="÷" id="÷">÷<br>-->
         </p>
         <p>
             <h4>First number</h4>
