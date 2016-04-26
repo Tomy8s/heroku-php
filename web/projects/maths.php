@@ -18,7 +18,7 @@ if (!isset($_GET['+'])) unset($ops[0]);
 if (!isset($_GET['-'])) unset($ops[1]);
 if (!isset($_GET['x'])) unset($ops[2]);
 if (!isset($_GET['÷'])) unset($ops[3]);
-    echo '<table id="table"><tr>';
+    echo '<table id="sums"><tr>';
     while ($noQ > 0) {
         $n1 = rand($mi1,$ma1);
         $op = array_rand($ops);
