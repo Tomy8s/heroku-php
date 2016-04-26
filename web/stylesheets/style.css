@@ -130,6 +130,18 @@ main .blob{
 main a:hover{
     text-decoration: underline;
 }
+#sums{
+    font-size:28px;
+    margin: 0 auto;
+}
+#sums td{
+    padding: 10px;
+}
+#sums #buttons{
+    position: static;
+    display: block;
+    margin: 0 auto;
+}
 footer{
     background:linear-gradient(#fff, #F1F1F4) fixed;
     width:100%;
