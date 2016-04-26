@@ -52,10 +52,10 @@ if (!isset($_GET['÷'])) unset($ops[3]);
     if ($_GET['questions']%2==1) echo '<td></td><td></td></td><td></tr>';
     ?>
     </table><br>
-    <div id="butttons">
+    <!--<div id="butttons">
         <button id="print" onclick="window.print()">Print</button>&nbsp;
         <button id="regen" onclick="location.reload(true)">Regenerate questions</button>
-    </div>
+    </div>-->
     <?php
 }
 ?>
