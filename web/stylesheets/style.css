@@ -10,6 +10,7 @@ body{
     z-index:1;
     width:100%;
     margin:-8px;
+    margin-bottom: 0;
     padding:5px;
     background:linear-gradient(#F1F1F4, #fff) fixed;
 }
