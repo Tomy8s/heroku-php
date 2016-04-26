@@ -34,7 +34,7 @@ if (!isset($_GET['÷'])) unset($ops[3]);
         }elseif ($op == 3){
             if ($mi2 == 0) $mi2 = 1;
             if ($ma2 == 0) $ma2 = 1;
-            $n1 = (rand(max($mi1,$miA*$ma2)/$ml1,min($ma1,$mi2*$maA)/$ml1))*$ml1;
+            $n1 = (rand(max($mi1,$miA*$mi2)/$ml1,min($ma1,$ma2*$maA)/$ml1))*$ml1;
             $n2 = (rand(max($mi2,$n1*$miA)/$ml2,min($ma2,$n1*$maA)/$ml2))*$ml2;
         }else{
             $n2 = rand($mi2,$ma2);
