@@ -32,4 +32,5 @@
         </p>
         <input type="submit">
     </form>
+    <script src="maths.js"></script> 
 <?php include('../views/footer.html');?>

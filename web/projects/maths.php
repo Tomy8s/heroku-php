@@ -18,7 +18,7 @@ if (!isset($_GET['+'])) unset($ops[0]);
 if (!isset($_GET['-'])) unset($ops[1]);
 if (!isset($_GET['x'])) unset($ops[2]);
 if (!isset($_GET['÷'])) unset($ops[3]);
-    echo '<table id="sums"><tr>';
+    echo '<div id="sums">';
     while ($noQ > 0) {
         $n1 = rand($mi1,$ma1);
         $op = array_rand($ops);
@@ -29,8 +29,8 @@ if (!isset($_GET['÷'])) unset($ops[3]);
             $n1 = (rand(max($mi1,$miA+$mi2)/$ml1,min($ma1,$maA-$mi2)/$ml1))*$ml1;
             $n2 = (rand(max($mi2,$miA-$n1)/$ml2,min($ma2,$n1-$miA)/$ml2))*$ml2;
         }elseif ($op == 2){
-            $n1 = (rand(max($mi1,ceil($miA/$ma2))/$ml1,min($ma1,($mi2 == 0)? $maA : floor($maA/$mi2))/$ml1))*$ml1;
-            $n2 = (rand(max($mi2,($n1 ==0)? $mi2 : ceil($miA/$n1))/$ml2,min($ma2,($n1 ==0)? $ma2 : floor($maA/$n1))/$ml2))*$ml2;
+            $n1 = (rand(ceil(max($mi1,($miA == 0)? $mi1 : ceil($miA/$ma2))/$ml1),min($ma1,($mi2 == 0)? $ma1 : floor($maA/$mi2))/$ml1))*$ml1;
+            $n2 = (rand(ceil(max($mi2,($n1 == 0)? $mi2 : ceil($miA/$n1))/$ml2),min($ma2,($n1 == 0)? $ma2 : floor($maA/$n1))/$ml2))*$ml2;
         }elseif ($op == 3){
             if ($mi2 == 0) $mi2 = 1;
             if ($ma2 == 0) $ma2 = 1;
@@ -45,13 +45,10 @@ if (!isset($_GET['÷'])) unset($ops[3]);
             $n2 = $tmp;
         }
         isset($_GET['qNo']) && $_GET['qNo'] == 'on' ? $qNo = $_GET['questions'] - $noQ + 1 : $qNo = '';
-        echo '<td>',$qNo,'</td><td>',$n1,$ops[$op],$n2,' = </td><td> ____ </td><td></td>';
-        if (($_GET['questions']-$noQ)%2==1) echo '</tr>';
+        echo '<div class="question">',$qNo,'&nbsp',$n1,$ops[$op],$n2,' = ____</div>';
         $noQ--;
     }
-    if ($_GET['questions']%2==1) echo '<td></td><td></td></td><td></tr>';
-    ?>
-    </table><br>
+    ?><br>
     <!--<div id="butttons">
         <button id="print" onclick="window.print()">Print</button>&nbsp;
         <button id="regen" onclick="location.reload(true)">Regenerate questions</button>
