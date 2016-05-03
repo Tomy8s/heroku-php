@@ -5,14 +5,30 @@
 }
 body{
     height:100%;
-}#top{
+    background:linear-gradient(#F1F1F4, #fff) fixed;
+}
+p{
+    font-size: 16px;
+}
+h4{
+    font-size: 18px;
+}
+h3{
+    font-size: 24px;
+}
+h2{
+    font-size: 28px;
+}
+h1{
+    font-size: 32px;
+}
+#top{
     position:relative;
     z-index:1;
     width:100%;
     margin:-8px;
     margin-bottom: 0;
     padding:5px;
-    background:linear-gradient(#F1F1F4, #fff) fixed;
 }
 #title{
     display:inline-block;
@@ -117,31 +133,128 @@ body{
     transition:all ease-in-out;
     transition:visibility;
 }
+.notice{
+    border: 15px solid #004800;
+    border-radius: 15px;
+    background-color: #004800;
+    color: #FFFFFF;
+    margin: 5px;
+}
 main{
     margin-bottom:50px;
 }
 main .blob{
-    border: 15px solid #484848;
+    padding: 10px;
     border-radius: 15px;
-    background-color: #484848;
+    background:linear-gradient(#123456, #9F9FA3);
     color: #FFFFFF;
     margin: 5px;
+}
+main .blob :first-child{
+    margin-top: 0;
+}
+main .blob :last-child{
+    margin-bottom: 0;
+}
+main .blob h3 small{
+    font-size: 16px;
+    color: #cccccc;
+    font-weight: 300;
 }
 main a:hover{
     text-decoration: underline;
 }
-#sums{
+main form{
+    line-height: 2em;
+    display: block;
+}
+main form table{
+    margin: 0 auto;    
+}
+main form tr td:first-child{
+    text-align: right;
+}
+main input, textarea, button{
+    width: 300px;
+    border: 15px solid #484848;
+    border-radius: 15px;
+    background-color: #484848;
+    color: #FFFFFF;  
+}
+main input[type=checkbox]{
+    width: auto;
+}
+main input[type=number]{
+    width: auto;
+}
+main .blob input, textarea{
+    border: 15px solid #FFFFFF;
+    background-color: #FFFFFF;
+    color: #484848;  
+}
+main .blob input[type="submit"]{
+    display: block;
+    width: auto;
+    margin: auto;
+}
+main input[type=radio]{
+    width: 26px;
+    height: 26px;
+}
+main #submit, button{
+    width: 150px;
+    margin: 0 auto;
+}
+main #sums{
     font-size:28px;
     margin: 0 auto;
 }
-#sums td{
+main #sums td{
     padding: 10px;
 }
-#sums #buttons{
+main #sums #buttons{
     position: static;
     display: block;
     width: 350px;
     margin: 0 auto;
+}
+main #fourlettertable{
+    margin: 0 auto;    
+}
+main #fourlettertable th{
+    border-radius:10px;
+    width: 175px;
+    background: #484848;
+    color: #FFFFFF;
+}
+main #fourlettertable td{
+    border-radius:10px;
+    width: 150px;
+}
+main #fourlettertable .rw{
+    text-align: center;
+    background: #D8D800;
+}
+main #fourlettertable .rr{
+    text-align: center;
+    background: #00D800;
+}
+main #fourlettertable .gu{
+    background:#123456;
+    color: #FFFFFF;
+    padding-left: 10px;
+}
+main #fourlettertable main input{
+    border: 15px solid #484848;
+    border-radius: 15px;
+    background-color: #484848;
+    color: #FFFFFF;
+    font-size: 26px;
+}
+main .question{
+    display: inline-block;
+    /*width: 200px;*/
+    margin: 15px;
 }
 footer{
     background:linear-gradient(#fff, #F1F1F4) fixed;
@@ -160,7 +273,7 @@ footer p{
         height:auto;
         width:auto
     }
-    #navtop ul li{
+    #navtop ul li:hover{
         width:100%;
         margin:0;
     }
