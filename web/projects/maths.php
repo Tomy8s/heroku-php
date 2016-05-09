@@ -23,21 +23,19 @@ if (!isset($_GET['÷'])) unset($ops[3]);
         $n1 = rand($mi1,$ma1);
         $op = array_rand($ops);
         if ($op == 0){
-            $n1 = (rand(max($mi1,$miA-$mi2)/$ml1,min($ma1,$maA-$mi2)/$ml1))*$ml1;
-            $n2 = (rand(max($mi2,$miA-$n1)/$ml2,min($ma2,$maA-$n1)/$ml2))*$ml2;
+            $n1 = rand(ceil(max($mi1,$miA-$mi2)/$ml1),min($ma1,$maA-$mi2)/$ml1)*$ml1;
+            $n2 = rand(ceil(max($mi2,$miA-$n1)/$ml2),min($ma2,$maA-$n1)/$ml2)*$ml2;
         }elseif ($op == 1){
-            $n1 = (rand(max($mi1,$miA+$mi2)/$ml1,min($ma1,$maA-$mi2)/$ml1))*$ml1;
-            $n2 = (rand(max($mi2,$miA-$n1)/$ml2,min($ma2,$n1-$miA)/$ml2))*$ml2;
+            $n1 = rand(ceil(max($mi1,$miA+$mi2)/$ml1),min($ma1,$maA+$ma2)/$ml1)*$ml1;
+            $n2 = rand(ceil(max($mi2,$miA-$n1)/$ml2),min($ma2,$n1-$miA)/$ml2)*$ml2;
         }elseif ($op == 2){
-            $n1 = (rand(ceil(max($mi1,($miA == 0)? $mi1 : ceil($miA/$ma2))/$ml1),min($ma1,($mi2 == 0)? $ma1 : floor($maA/$mi2))/$ml1))*$ml1;
-            $n2 = (rand(ceil(max($mi2,($n1 == 0)? $mi2 : ceil($miA/$n1))/$ml2),min($ma2,($n1 == 0)? $ma2 : floor($maA/$n1))/$ml2))*$ml2;
+            $n1 = rand(ceil(max($mi1,($miA == 0)? $mi1 : ceil($miA/$ma2))/$ml1),min($ma1,($mi2 == 0)? $ma1 : floor($maA/$mi2))/$ml1)*$ml1;
+            $n2 = rand(ceil(max($mi2,($n1 == 0)? $mi2 : ceil($miA/$n1))/$ml2),min($ma2,($n1 == 0)? $ma2 : floor($maA/$n1))/$ml2)*$ml2;
         }elseif ($op == 3){
             if ($mi2 == 0) $mi2 = 1;
             if ($ma2 == 0) $ma2 = 1;
-            $n1 = (rand(max($mi1,$miA*$mi2)/$ml1,min($ma1,$ma2*$maA)/$ml1))*$ml1;
-            $n2 = (rand(max($mi2,$n1*$miA)/$ml2,min($ma2,$n1*$maA)/$ml2))*$ml2;
-        }else{
-            $n2 = rand($mi2,$ma2);
+            $n1 = rand(max($mi1,$miA*$mi2)/$ml1,min($ma1,$ma2*$maA)/$ml1)*$ml1;
+            $n2 = rand(max($mi2,$n1*$miA)/$ml2,min($ma2,$n1*$maA)/$ml2)*$ml2;
         }
         if (isset($_GET['flip']) && $_GET['flip'] == 'on' && ($op % 2 == 0) && rand(0,1) == 1){
             $tmp = $n1;
@@ -56,4 +54,3 @@ if (!isset($_GET['÷'])) unset($ops[3]);
     <?php
 }
 ?>
-<?php include('../views/footer.html');?>
