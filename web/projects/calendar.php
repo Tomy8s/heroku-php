@@ -3,21 +3,32 @@
 $year = isset($_GET['year']) && is_numeric($_GET['year']) && ((abs(intval($_GET['year'])) < 100) || (((abs(intval($_GET['year'])) > 1999) && abs(intval($_GET['year'])) < 3000))) ? abs(intval($_GET['year'])) : date('Y');
 $month = isset($_GET['month']) && is_numeric($_GET['month']) && abs(intval($_GET['month'])) < 13 && intval($_GET['month']) != 0 ? $_GET['month'] : date('m');
 $firstday = date('N', mktime(0,0,0,$month,1,$year))-1;
-$weeks = ceil(($firstday + cal_days_in_month(CAL_GREGORIAN, $month, $year))/7);
-$daysprevmonth = $month == 1 ? cal_days_in_month(CAL_GREGORIAN, 12, $year - 1) : cal_days_in_month(CAL_GREGORIAN, $month - 1, $year);
-$daysthismonth = cal_days_in_month(CAL_GREGORIAN, $month, $year);
+
+//I did use cal_days_in_month, but doesn't work on old versions of heroku
+//Fix for heroku from https://www.webmasterworld.com/forum88/10544.htm
+function days_in_month($month, $year) { 
+if(checkdate($month, 31, $year)) return 31; 
+if(checkdate($month, 30, $year)) return 30; 
+if(checkdate($month, 29, $year)) return 29; 
+if(checkdate($month, 28, $year)) return 28; 
+return 0; // error 
+}
+
+$weeks = ceil(($firstday + days_in_month($month, $year))/7);
+$daysprevmonth = $month == 1 ? days_in_month(12, $year - 1) : days_in_month($month - 1, $year);
+$daysthismonth = days_in_month($month, $year);
 ?>
-        <iframe name="iframe_add" id="iframe" align="middle"></iframe>
+        <!--<iframe name="iframe_add" id="iframe" align="middle"></iframe>-->
         <header>
             <div id="header">
                 <div id="last" class="selection">
-                    <h6 class="other_month_link" id="lmonth"><a href="./calendar.php?month=<?php echo $month > 1 ? $month -1 : 12?>&year=<?php echo $month >1 ? $year : $year -1?>"><?php echo date('F',mktime(0,0,0,($month > 1 ? $month -1 : 12))), ' ', ($month > 1) ? $year : $year-1;?></a></h6>
-                    <h6 class="other_month_link" id="lyear"><a href="./calendar.php?month=<?php echo $month?>&year=<?php echo $year -1?>"><?php echo date('F',mktime(0,0,0,$month)), ' ', $year -1;?></a></h6>
+                    <h6 class="other_month_link" id="lmonth" style="color:#222"><a href="./calendar.php?month=<?php echo $month > 1 ? $month -1 : 12?>&year=<?php echo $month >1 ? $year : $year -1?>"><?php echo date('F',mktime(0,0,0,($month > 1 ? $month -1 : 12))), ' ', ($month > 1) ? $year : $year-1;?></a></h6>
+                    <h6 class="other_month_link" id="lyear" style="color:#222"><a href="./calendar.php?month=<?php echo $month?>&year=<?php echo $year -1?>"><?php echo date('F',mktime(0,0,0,$month)), ' ', $year -1;?></a></h6>
                 </div>
                 <h1>Calendar for <?php echo date('F',mktime(0,0,0,$month)), ' ', $year;?></h1>
                 <div id="next" class="selection">
-                    <h6 class="other_month_link" id="nmonth"><a href="./calendar.php?month=<?php echo $month < 12 ? $month +1 : 1?>&year=<?php echo $month < 12 ? $year : $year +1?>"><?php echo date('F',mktime(0,0,0,($month < 12 ? $month +1 : 1))), ' ', ($month < 12) ? $year : $year +1;?></a></h6>
-                    <h6 class="other_month_link" id="nyear"><a href="./calendar.php?month=<?php echo $month?>&year=<?php echo $year +1?>"><?php echo date('F',mktime(0,0,0,$month)), ' ', $year +1;?></a></h6>
+                    <h6 class="other_month_link" id="nmonth" style="color:#222"><a href="./calendar.php?month=<?php echo $month < 12 ? $month +1 : 1?>&year=<?php echo $month < 12 ? $year : $year +1?>"><?php echo date('F',mktime(0,0,0,($month < 12 ? $month +1 : 1))), ' ', ($month < 12) ? $year : $year +1;?></a></h6>
+                    <h6 class="other_month_link" id="nyear" style="color:#222"><a href="./calendar.php?month=<?php echo $month?>&year=<?php echo $year +1?>"><?php echo date('F',mktime(0,0,0,$month)), ' ', $year +1;?></a></h6>
                 </div>
             </div>
         </header>
