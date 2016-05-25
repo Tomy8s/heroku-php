@@ -57,7 +57,8 @@ h1{
 }
 #navtop ul{
     padding:0;
-}#navtop ul li{
+}
+#navtop ul li{
     display:inline-block;
     height:16px;
     width:122px;
@@ -253,7 +254,6 @@ main #fourlettertable main input{
 }
 main .question{
     display: inline-block;
-    /*width: 200px;*/
     margin: 15px;
 }
 footer{

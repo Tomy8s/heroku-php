@@ -7,6 +7,7 @@ main a{
     color: #FFFFFF;
 }
 main #header{
+    background: #484848;
     color: #222;
     margin-right: auto;
     margin-left: auto;
@@ -20,6 +21,7 @@ main h1{
     width: 500px;
 }
 main h6{
+    color: #222;
     font-size: 12px;
     line-height: 18px;
     margin: 0px;
