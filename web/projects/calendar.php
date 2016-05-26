@@ -1,5 +1,6 @@
 <?php include('../views/header.php');?>
 <?php
+require('../connect_db.php');
 $year = isset($_GET['year']) && is_numeric($_GET['year']) && ((abs(intval($_GET['year'])) < 100) || (((abs(intval($_GET['year'])) > 1999) && abs(intval($_GET['year'])) < 3000))) ? abs(intval($_GET['year'])) : date('Y');
 $month = isset($_GET['month']) && is_numeric($_GET['month']) && abs(intval($_GET['month'])) < 13 && intval($_GET['month']) != 0 ? $_GET['month'] : date('m');
 $firstday = date('N', mktime(0,0,0,$month,1,$year))-1;
@@ -18,7 +19,6 @@ $weeks = ceil(($firstday + days_in_month($month, $year))/7);
 $daysprevmonth = $month == 1 ? days_in_month(12, $year - 1) : days_in_month($month - 1, $year);
 $daysthismonth = days_in_month($month, $year);
 ?>
-        <!--<iframe name="iframe_add" id="iframe" align="middle"></iframe>-->
         <header>
             <div id="header">
                 <div id="last" class="selection">
@@ -50,7 +50,7 @@ $daysthismonth = days_in_month($month, $year);
                     echo '    <li class="', ($day > 0) && ($day <= $daysthismonth) ? '' : 'not-', 'this-month">
                        ';
                         echo '<p class="dateno"><span class="datenum">', $day < 1 ? $daysprevmonth + $day : ($day > $daysthismonth ? $day - $daysthismonth : $day), '</span>';
-                        echo '  <a href="./add.php?day=', $day, '&month=', $month, '&year=', $year, '" target="iframe_add"class="adddiv">';
+                        echo '  <a href="./add.php?day=', $day, '&month=', $month, '&year=', $year, '" class="adddiv" onclick="showiframe()">';
                         echo '      <span class="plus">&nbsp+&nbsp</span><span class="add">add event</span>';
                         echo '  </a>';
                         echo <<<END
@@ -70,5 +70,8 @@ END;
             
             </div><!--dates-->
         </div><!--calendar-->
+        <iframe name="iframe_add" id="iframe" src="maths.php" align="middle"></iframe>
+        
+        <script src="add.js"></script>
 
 <?php include('../views/footer.html');?>
