@@ -256,6 +256,188 @@ main .question{
     display: inline-block;
     margin: 15px;
 }
+main #calheader{
+    display:block;
+    margin:auto;
+}
+main #calheader h1{
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+main #calheader .selection{
+    width: 15%;
+    display: inline-block;
+    margin: 6px;
+}
+main #calheader .selection .other_month_link{
+    margin:0;
+}
+main #calheader #last{
+    text-align: left;
+    float: left;
+}
+main #calheader #next{
+    text-align: right;
+    float: right;
+}
+main #calendar{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 250px;
+    width: auto;
+}
+main #calendar ul{
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    clear: both;
+    width: auto;
+    }
+main #calendar li{
+    list-style: none;
+    float: left;
+    width: 14.2857%;
+    border-radius: 13px;
+    border-width: 1px;
+    border-style: solid;
+    margin: -1px;
+}
+main #calendar #day_names li{
+    background-color: #AAC;
+    text-align: center;
+    color: #EEEEEE;
+    border-color: #FFF;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    margin-bottom: 2px;
+}
+main #calendar .dates li{
+    height: 200px;
+    border-color: white;
+}
+main #calendar .dateno{
+    margin: 15px;
+}
+main #calendar .datenum{
+    color: #333;
+    float: none;
+    display: inline-block;
+    line-height: 100%;
+    padding: 3px;
+    margin-top: -10px;
+    vertical-align: middle;
+}
+main #calendar .not-this-month .adddiv{
+    display: none;
+}
+main #calendar .adddiv{
+    text-decoration: none;
+    background-color: #333;
+    float: right;
+    display: inline;
+    border-radius: 13px;
+    padding: 3px;
+    margin-top: -10px;
+    overflow: hidden;
+}
+main #calendar .plus{
+    color: #FFF;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 14px;
+    display: inline;
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    margin: -2px;
+    vertical-align:middle;
+}
+main #calendar .adddiv:hover .plus{
+    transform: rotate(-180deg);
+    transition-duration: 1s;
+}
+main #calendar .adddiv:not(:hover) .plus{
+    transform: rotate(180deg);
+    transition-duration: 1s;
+}
+main #calendar .add{
+    color: #FFF;
+    position: relative;
+    white-space: nowrap;
+    font-size: 14px;
+    height: 100%;
+    padding: 2px;
+    margin: -2px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+    /*bits that change*/
+    line-height: 0px;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    left: 75px;
+}
+main #calendar .adddiv:hover .add{
+    line-height: 14px;
+    width: 70px;
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    transition-property: width, opacity, left;
+    transition-duration: 1s;
+}
+main #calendar .adddiv:not(:hover) .add{
+    line-height: 0px;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    left: 75px;
+    transition-property: width, opacity, left;
+    transition-duration: 1s;
+}
+main #calendar .this-month .dateno{
+    display: block;
+    color: #222;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #AAA;
+}
+main #calendar .not-this-month .dateno{
+    color: #BBB;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #CCC;
+}
+main #calendar .this-month{
+    background-color: #DDD;
+}
+main #calendar .this-month:hover{
+    background-color: #FFF;
+}
+main #calendar .event{
+    background: red;
+}
+main #calendar .not-this-month{
+    background-color: #EEE;
+}
+#iframe{
+    background-color: #FFF;
+    padding: 25%;
+    border: none;
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    z-index: -10;
+    visibility: hidden;
+    display: none;
+}
+#footer{
+    display: block;
+    float: none;
+}
 footer{
     background:linear-gradient(#fff, #F1F1F4) fixed;
     width:100%;
