@@ -1,6 +1,6 @@
 <?php include('../views/header.php');?>
 <?php
-require('../connect_db.php');
+//require('../connect_db.php');
 $year = isset($_GET['year']) && is_numeric($_GET['year']) && ((abs(intval($_GET['year'])) < 100) || (((abs(intval($_GET['year'])) > 1999) && abs(intval($_GET['year'])) < 3000))) ? abs(intval($_GET['year'])) : date('Y');
 $month = isset($_GET['month']) && is_numeric($_GET['month']) && abs(intval($_GET['month'])) < 13 && intval($_GET['month']) != 0 ? $_GET['month'] : date('m');
 $firstday = date('N', mktime(0,0,0,$month,1,$year))-1;
