@@ -22,11 +22,11 @@ $daysthismonth = days_in_month($month, $year);
             <div id="calheader">
                 <div id="last" class="selection">
                     <h6 class="other_month_link" id="lmonth" style="color:#222"><a href="./calendar.php?month=<?php echo $month > 1 ? $month -1 : 12?>&year=<?php echo $month >1 ? $year : $year -1?>"><?php echo date('F',mktime(0,0,0,($month > 1 ? $month -1 : 12),5)), ' ', ($month > 1) ? $year : $year-1;?></a></h6>
-                    <h6 class="other_month_link" id="lyear" style="color:#222"><a href="./calendar.php?month=<?php echo $month?>&year=<?php echo $year -1?>"><?php echo date('F',mktime(0,0,0,$month)), ' ', $year -1;?></a></h6>
+                    <h6 class="other_month_link" id="lyear" style="color:#222"><a href="./calendar.php?month=<?php echo $month?>&year=<?php echo $year -1?>"><?php echo date('F',mktime(0,0,0,$month,5)), ' ', $year -1;?></a></h6>
                 </div>
                 <div id="next" class="selection">
                     <h6 class="other_month_link" id="nmonth" style="color:#222"><a href="./calendar.php?month=<?php echo $month < 12 ? $month +1 : 1?>&year=<?php echo $month < 12 ? $year : $year +1?>"><?php echo date('F',mktime(0,0,0,($month < 12 ? $month +1 : 1),5)), ' ', ($month < 12) ? $year : $year +1;?></a></h6>
-                    <h6 class="other_month_link" id="nyear" style="color:#222"><a href="./calendar.php?month=<?php echo $month?>&year=<?php echo $year +1?>"><?php echo date('F',mktime(0,0,0,$month)), ' ', $year +1;?></a></h6>
+                    <h6 class="other_month_link" id="nyear" style="color:#222"><a href="./calendar.php?month=<?php echo $month?>&year=<?php echo $year +1?>"><?php echo date('F',mktime(0,0,0,$month,5)), ' ', $year +1;?></a></h6>
                 </div>
                 <h1>Calendar for <?php echo date('F',mktime(0,0,0,$month,5)), ' ', $year;?></h1>
             </div>
