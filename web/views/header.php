@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-<!--<title>Getting Started</title>
-<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+
+<!--<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />-->
@@ -36,10 +36,10 @@
                             <a href="http://tomy8s.herokuapp.com/learning/academia">Academia</a>
                         </li>
                         <li>
-                            <a href="http://tomy8s.herokuapp.com/learning/computing">Computing and IT</a>
+                            <a href="http://tomy8s.herokuapp.com/learning/computing">Computing</a>
                         </li>
                         <li>
-                            <a href="http://tomy8s.herokuapp.com/learning/other">Other acheivements</a>
+                            <a href="http://tomy8s.herokuapp.com/learning/other">Other</a>
                         </li>
                     </ul><!--Learning-->
                 </li>
@@ -57,7 +57,7 @@
                             <a href="calendar.php">Calendar</a>
                         </li>
                         <li>
-                            <a href="game_of_life_init.php">Conway's Game of Life</a>
+                            <a href="game_of_life_init.php">Conway's Game</a>
                         </li>
                     </ul>
                 </li><!--Projects-->

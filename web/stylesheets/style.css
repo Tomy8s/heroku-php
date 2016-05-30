@@ -115,7 +115,7 @@ h1{
 }
 #navtop ul li:hover ul{
     position:absolute;
-    width:205px;
+    width:122px;
     visibility:visible;
     height:auto;
     transition-property:height;
@@ -124,7 +124,7 @@ h1{
 #navtop ul ul li{
     display:block;
     height:16px;
-    width:250px;
+    width:122px;
     background:linear-gradient(#123456, #AFAFB3);
     border-width:2px;
     border-style:solid;
@@ -475,23 +475,20 @@ footer p{
         width:auto
     }
     #navtop ul li:hover{
-        width:144px;
+        width:122px;
         margin:0;
     }
     #navtop ul ul li{
-        width:100%;
+        width:122px;
     }
     main #calendar #day_names{
-        display:none;
-    }
-    main #calendar li.not-this-month{
         display:none;
     }
     main #calendar .dates li{
         width:100%;
         height:auto;
     }
-    main #calendar a.add{
+    main #calendar span.add{
         color: #FFF;
         position: relative;
         white-space: nowrap;
@@ -508,6 +505,12 @@ footer p{
         visibility:visible;
         opacity:1;
         left:0;
+    }
+    main #calendar li.not-this-month{
+        display:none;
+    }
+    main #calendar .this-month:hover{
+        background-color: #DDD;
     }
     .mob{
         display:block;
