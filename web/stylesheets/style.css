@@ -481,16 +481,30 @@ footer p{
     #navtop ul ul li{
         width:100%;
     }
-    main #calendar #day_names, .not-this-month{
+    main #calendar #day_names{
+        display:none;
+    }
+    main #calendar li.not-this-month{
         display:none;
     }
     main #calendar .dates li{
         width:100%;
         height:auto;
     }
-    main #calendar .add{
-        line-height:14px;
-        width:70px;
+    main #calendar a.add{
+        color: #FFF;
+        position: relative;
+        white-space: nowrap;
+        font-size: 14px;
+        height: 100%;
+        padding: 2px;
+        margin: -2px;
+        vertical-align: middle;
+        overflow: hidden;
+        display: inline-block;
+        /*bits that change*/
+        line-height: 14px;
+        width:70;
         visibility:visible;
         opacity:1;
         left:0;
