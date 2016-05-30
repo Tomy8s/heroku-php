@@ -48,22 +48,32 @@ $daysthismonth = days_in_month($month, $year);
                     echo '    <li class="', ($day > 0) && ($day <= $daysthismonth) ? '' : 'not-', 'this-month">
                        ';
                         echo '<p class="dateno"><span class="datenum">', $day < 1 ? $daysprevmonth + $day : ($day > $daysthismonth ? $day - $daysthismonth : $day), '</span>';
-                        echo '  <a href="./add.php?day=', $day, '&month=', $month, '&year=', $year, '" class="adddiv" onclick="showiframe()">';
-                        echo '      <span class="plus">&nbsp+&nbsp</span><span class="add">add event</span>';
-                        echo '  </a></p>';
+                        if (($day > 0) && ($day <= $daysthismonth)){
+                            echo '  <a href="./add.php?day=', $day, '&month=', $month, '&year=', $year, '" class="adddiv" onclick="showiframe()">';
+                            echo '      <span class="plus">&nbsp+&nbsp</span><span class="add">add event</span>';
+                            echo '  </a>';
+                        }
+                        echo '</p>';
                         $pgday = $day < 1 ? $daysprevmonth + $day : ($day > $daysthismonth ? $day - $daysthismonth : $day);
-                        $pgmonth = $day < 1 ? ($month > 1 ? $month - 1 : 12): $day > $daysthismonth ? ($month < 12 ? $month + 1 : 1): $month;
-                        $query = pg_select($dbc, 'events', array("date"=>$year."-".$pgmonth."-".$pgday));
+                        $pgmonth = $day < 1 ? ($month > 1 ? $month - 1 : 12) : ($day > $daysthismonth ? ($month < 12 ? $month + 1 : 1): $month);
+                        $pgyear = ($day < 1 && $month == 1) ? $year - 1 : (($day > $daysthismonth && $month == 12)? $year + 1 : $year);
+                        $query = pg_select($dbc, 'events', array("date"=>$pgyear."-".$pgmonth."-".$pgday));
                         if ($query){
                             foreach($query as $i){
-                                //print_r($i);
-                                echo '<p class="event"><h5>'.$i['name'].'</h5><p>'.$i['description'].'</p></p>';
+                                echo '<div class="event"><h4  alt="'.$i['description'].'"onclick="if (document.getElementById(\'desc'.$i['id'].'\').style.display == \'block\'){document.getElementById(\'click'.$i['id'].'\').style.display = \'inline\';document.getElementById(\'desc'.$i['id'].'\').style.display = \'none\';document.getElementById(\'small'.$i['id'].'\').style.display = \'none\';}else{document.getElementById(\'desc'.$i['id'].'\').style.display = \'block\';document.getElementById(\'small'.$i['id'].'\').style.display = \'inline\';document.getElementById(\'click'.$i['id'].'\').style.display = \'none\';}">'.$i['name'];
+                                echo '<small id="click'.$i['id'].'" class="click"> | Click for details</small>';
+                                echo '<small id="small'.$i['id'].'"> | <a href="javascript:document.getElementById(\'delId'.$i['id'].'\').submit()">Delete</a></small>';
+                                echo '</h4><p id="desc'.$i['id'].'">'.$i['description'].'</p></div>';
+                                echo '<form action="./delete.php" method="post" id="delId'.$i['id'].'">';
+                                echo '<input type="hidden" name="id" value="'.$i['id'].'">';
+                                echo '<input type="hidden" name="date" value="'.$i['date'].'">';
+                                echo '<input type="hidden" name="name" value="'.$i['name'].'">';
+                                echo '<input type="hidden" name="description" value="'.$i['description'].'">';
+                                echo '</form>';
                             }
-                        //}else{
-                        //    echo "No events today!";
                         }
                        
-                    echo '</li>';
+                    echo '</li><br class="mob">';
                 }
     
         echo '</ul>';
@@ -74,5 +84,6 @@ $daysthismonth = days_in_month($month, $year);
         <iframe name="iframe_add" id="iframe" src="maths.php" align="middle"></iframe>
         
         <script src="add.js"></script>
+
 
 <?php include('../views/footer.html');?>

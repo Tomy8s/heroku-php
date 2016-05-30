@@ -24,9 +24,11 @@
                 <li>
                     <a href="http://tomy8s.herokuapp.com/about">About me</a>
                 </li>
+                <br class="mob">
                 <li>
                     <a href="http://tomy8s.herokuapp.com/tefl/links/index">TEFL</a>
                 </li>
+                <br class="mob">
                 <li>
                     <a href="http://tomy8s.herokuapp.com/learning/academia">Learning</a>
                     <ul>
@@ -41,6 +43,7 @@
                         </li>
                     </ul><!--Learning-->
                 </li>
+                <br class="mob">
                 <li>
                     <a href="http://tomy8s.herokuapp.com/projects">Projects</a>
                     <ul>

@@ -115,6 +115,7 @@ h1{
 }
 #navtop ul li:hover ul{
     position:absolute;
+    width:205px;
     visibility:visible;
     height:auto;
     transition-property:height;
@@ -318,7 +319,7 @@ main #calendar .dates li{
     border-color: white;
 }
 main #calendar .dateno{
-    margin: 15px;
+    margin: 15px 15px 0 15px;
 }
 main #calendar .datenum{
     color: #333;
@@ -418,7 +419,25 @@ main #calendar .this-month:hover{
     background-color: #FFF;
 }
 main #calendar .event{
-    background: red;
+    color: #333;
+    background: #EEE;
+    border-radius: 10px;
+    margin: 0 5px;
+    padding: 0 2px;
+}
+main #calendar .event p, small{
+    display: none;
+}
+main #calendar h4{
+    cursor: pointer;
+}
+main #calendar small{
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 13px;
+}
+main #calendar .click{
+    display: inline;
 }
 main #calendar .not-this-month{
     background-color: #EEE;
@@ -462,11 +481,25 @@ footer p{
     #navtop ul ul li{
         width:100%;
     }
+    main #calendar #day_names, .not-this-month{
+        display:none;
+    }
+    main #calendar .dates li{
+        width:100%;
+        height:auto;
+    }
+    main #calendar .add{
+        line-height:14px;
+        width:70px;
+        visibility:visible;
+        opacity:1;
+        left:0;
+    }
     .mob{
         display:block;
     }
     main{
-        margin-top:100px;
+        margin-top:0;
     }
 }
 @media (max-width: 375px){
