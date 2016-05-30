@@ -1,10 +1,12 @@
 <?php include('../views/header.php');?>
-    <h1>Welcome to the Game of Life</h1>
-    <h3>How to play</h3>
+    <h1>Welcome to Conway's Game of Life</h1>
+    <h3>How to play:</h3>
     <p>
-        Enter the size of the field you'd like to play on. If you'd like a computer to set up the board for you check the "start with randomly placed live cells" checkbox and (optionally) enter the number of live cells you'd like to start with.<br>
+        Enter the size of the field you'd like to play on. If you'd like a computer to set up the board
+        for you, check the "start with randomly placed live cells" checkbox and (optionally) enter the
+        number of live cells you'd like to start with.<br>
         <ul>
-            <li>Any live cell with two or three neighbours will survive to the next generation.</li>
+            <li>Any live cell with two or three live neighbours will survive to the next generation.</li>
             <li>Any dead cell with exactly three neighbours will come to life in the next generation.</li>
             <li>All other cells will be dead in the next generation.</li>
         </ul>
@@ -16,4 +18,7 @@
         Number of live cells (leave blank for random): <input type="text" name="live"><br>
         <input type="submit" value="Play!">
     </form>
+    <p>
+        If you want more information visit <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia's article on the game</a>.
+    </p>
 <?php include('../views/footer.html');?>
