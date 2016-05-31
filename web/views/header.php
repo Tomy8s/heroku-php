@@ -26,7 +26,7 @@
                 </li>
                 <br class="mob">
                 <li>
-                    <a href="http://tomy8s.herokuapp.com/tefl/links/index">TEFL</a>
+                    <a href="http://tomy8s.herokuapp.com/tefl/links">TEFL</a>
                 </li>
                 <br class="mob">
                 <li>
@@ -36,7 +36,7 @@
                             <a href="http://tomy8s.herokuapp.com/learning/academia">Academia</a>
                         </li>
                         <li>
-                            <a href="http://tomy8s.herokuapp.com/learning/computing">Computing</a>
+                            <a href="http://tomy8s.herokuapp.com/learning/computings">Computing</a>
                         </li>
                         <li>
                             <a href="http://tomy8s.herokuapp.com/learning/other">Other</a>
