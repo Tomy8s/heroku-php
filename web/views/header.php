@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php include_once("analyticstracking.php") ?>
 
 <!--<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -16,6 +15,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13239061_10102022617097918_7430461033153205691_n.jpg?oh=e47e3ba3d26de5b22470493d40b06fe0&oe=57C9E11F">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include_once("analyticstracking.php") ?>
 </head>
 
 
