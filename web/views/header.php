@@ -64,6 +64,9 @@
                         <li>
                             <a href="game_of_life_init.php">Conway's Game</a>
                         </li>
+                        <li>
+                            <a href="gal_viewer.php">pic viewer</a>
+                        </li>
                     </ul>
                 </li><!--Projects-->
             </ul><!--All items-->
